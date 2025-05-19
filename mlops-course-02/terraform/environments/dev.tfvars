@@ -1,5 +1,5 @@
-environment = "sandbox"
-aws_region  = "eu-west-3"
+environment = "dev"
+aws_region  = "eu-north-1"
 
 
 s3_buckets = [
