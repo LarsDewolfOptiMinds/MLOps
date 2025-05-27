@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1748349527613
+current_stage: None
+description: null
+last_updated_timestamp: 1748349527613
+name: insurance_model
+run_id: 110d68f1734d4283ab86314cfd3e2ce8
+run_link: null
+source: file:///C:/Users/dewolla/AppliedAIErasmus/MLOps/MLOps/mlops-course-02/src/mlruns/924284214557633849/110d68f1734d4283ab86314cfd3e2ce8/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/dewolla/AppliedAIErasmus/MLOps/MLOps/mlops-course-02/src/mlruns/924284214557633849/110d68f1734d4283ab86314cfd3e2ce8/artifacts/model
+user_id: null
+version: 1

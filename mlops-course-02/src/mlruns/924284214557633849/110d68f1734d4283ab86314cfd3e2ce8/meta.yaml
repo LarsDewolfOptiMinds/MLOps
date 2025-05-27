@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/dewolla/AppliedAIErasmus/MLOps/MLOps/mlops-course-02/src/mlruns/924284214557633849/110d68f1734d4283ab86314cfd3e2ce8/artifacts
+end_time: 1748349527638
+entry_point_name: ''
+experiment_id: '924284214557633849'
+lifecycle_stage: active
+run_id: 110d68f1734d4283ab86314cfd3e2ce8
+run_name: capricious-bird-793
+run_uuid: 110d68f1734d4283ab86314cfd3e2ce8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748349516128
+status: 3
+tags: []
+user_id: dewolla
