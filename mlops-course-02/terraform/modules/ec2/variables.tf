@@ -13,3 +13,9 @@ variable "prefix" {
   type        = string
   default     = "ec2"
 }
+
+variable "delimiter" {
+  description = "Resource name delimiter."
+  type        = string
+  default     = "-"
+}
