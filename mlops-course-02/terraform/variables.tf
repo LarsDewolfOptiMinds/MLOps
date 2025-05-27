@@ -26,3 +26,9 @@ variable "ecr_repositories" {
   type        = list(any)
   default     = []
 }
+
+variable "ec2" {
+  description = "A list of EC2 servers"
+  type        = list(any)
+  default     = []
+}
