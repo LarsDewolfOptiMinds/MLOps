@@ -7,3 +7,9 @@ variable "instance_type" {
   description = "type of EC2 instance to provision."
   default = "t2.micro"
 }
+
+variable "prefix" {
+  description = "Resource name prefix."
+  type        = string
+  default     = "ec2"
+}
