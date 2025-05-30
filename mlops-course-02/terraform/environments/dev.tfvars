@@ -1,10 +1,10 @@
 environment = "dev"
-aws_region  = "eu-north-1"
+aws_region  = "eu-west-1"
 
 
 s3_buckets = [
   {
-    key  = "my-tf-test-bucket-lars-349873"
+    key  = "my-tf-test-bucket-lars-349873-west"
     tags = {}
   }
 ]
