@@ -1,5 +1,5 @@
 environment = "dev"
-aws_region  = "eu-west-1"
+aws_region  = "eu-north-1"
 
 
 s3_buckets = [
@@ -25,8 +25,8 @@ apprunner_services = [
     key = "mlops-course-ehb-app-Lars"
     source_configuration = {
       image_repository = {
-        image_identifier      = "926022988101.dkr.ecr.eu-west-1.amazonaws.com/ecr-mlops-course-ehb-repository-dev:latest"
-        image_repository_type = "ECR"
+        image_identifier      ="225520704241.dkr.ecr.eu-north-1.amazonaws.com/ecr-mlops-course-ehb-repository-dev:latest"
+        image_repository_type ="ECR"
         image_configuration = {
           port = 80
         }
