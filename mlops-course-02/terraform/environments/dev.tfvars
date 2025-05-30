@@ -20,12 +20,18 @@ ecr_repositories = [
   }
 ]
 
-ec2 = [
+apprunner_services = [
   {
-    key                          = "mlops-course-ehb-repository"
-    image_tag_mutability         = "MUTABLE"
-    image_scanning_configuration = {
-      scan_on_push = true
+    key = "mlops-course-ehb-app-Lars"
+    source_configuration = {
+      image_repository = {
+        image_identifier      = "926022988101.dkr.ecr.eu-west-1.amazonaws.com/ecr-mlops-course-ehb-repository-dev:latest"
+        image_repository_type = "ECR"
+        image_configuration = {
+          port = 80
+        }
+      }
+      auto_deployments_enabled = true
     }
     tags = {}
   }

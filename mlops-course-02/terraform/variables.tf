@@ -27,8 +27,8 @@ variable "ecr_repositories" {
   default     = []
 }
 
-variable "ec2" {
-  description = "A list of EC2 servers"
+variable "apprunner_services" {
+  description = "A list of App Runner Services"
   type        = list(any)
   default     = []
 }
