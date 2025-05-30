@@ -19,3 +19,14 @@ ecr_repositories = [
     tags = {}
   }
 ]
+
+ec2 = [
+  {
+    key                          = "mlops-course-ehb-repository"
+    image_tag_mutability         = "MUTABLE"
+    image_scanning_configuration = {
+      scan_on_push = true
+    }
+    tags = {}
+  }
+]
