@@ -3,6 +3,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   pull_request:
     branches: [ "main" ]
+    paths: 
+      - 'mlops-course-02/terraform/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,6 +15,8 @@ jobs:
     defaults:
       run:
         working-directory: mlops-course-02/terraform
+    permissions:
+      issues: write
 
     steps:
       - name: Checkout repository
@@ -26,7 +30,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-north-1
+          aws-region: eu-west-1
 
       - name: Terraform Format
         run: terraform fmt -check
@@ -40,6 +44,16 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -no-color --var-file='environments/dev.tfvars'
+
+      - name: Approval
+        uses: trstringer/manual-approval@v1
+        timeout-minutes: 60
+        with:
+          secret: ${{ github.token }}
+          approvers: LarsDewolfOptiMinds
+          issue-title: "Deploy Terraform Plan to dev"
+          issue-body: "Please review the Terraform Plan"
+          exclude-workflow-initiator-as-approver: false
 
       - name: Terraform Apply
         run: terraform apply --var-file='environments/dev.tfvars' -auto-approve
