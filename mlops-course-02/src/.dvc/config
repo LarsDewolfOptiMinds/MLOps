@@ -2,3 +2,4 @@
     remote = storage
 ['remote "storage"']
     url = s3://my-tf-test-bucket-lars-349873-west-dev/data
+    region = eu-west-1
